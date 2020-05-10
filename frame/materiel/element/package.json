@@ -1,0 +1,39 @@
+{
+  "name": "materiel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vue serve main.js",
+    "build": "vue build app/Materiel.vue --target lib",
+    "docs:dev": "npx vuepress dev docs",
+    "docs:build": "npx vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli-plugin-babel": "^4",
+    "babel-plugin-component": "^1",
+    "element-ui": "^2",
+    "vuepress": "^1"
+  },
+  "eslintIgnore": [
+    "app",
+    "docs"
+  ],
+  "babel": {
+    "presets": [
+      "@vue/cli-plugin-babel/preset"
+    ],
+    "plugins": [
+      [
+        "component",
+        {
+          "libraryName": "element-ui",
+          "styleLibraryName": "theme-chalk"
+        }
+      ]
+    ]
+  }
+}

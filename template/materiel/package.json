@@ -1,0 +1,17 @@
+{
+  "name": "materiel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx mcco-script materiel-dev",
+    "doc": "npx mcco-script materiel-doc",
+    "publish": "npx mcco-script materiel-publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mcco-script": "^1.1.0"
+  }
+}

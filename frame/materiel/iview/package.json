@@ -1,0 +1,23 @@
+{
+  "name": "materiel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vue serve main.js",
+    "build": "vue build app/Materiel.vue --target lib",
+    "docs:dev": "npx vuepress dev docs",
+    "docs:build": "npx vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "view-design": "^4",
+    "vuepress": "^1"
+  },
+  "eslintIgnore": [
+    "app",
+    "docs"
+  ]
+}
