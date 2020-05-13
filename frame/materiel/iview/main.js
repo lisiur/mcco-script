@@ -11,6 +11,7 @@ links.forEach(href => {
 })
 
 loadSyncScripts(scripts).then(() => {
+  Vue.use(ViewUI)
   new Vue({
     render: h => h(App),
   }).$mount('#app')
