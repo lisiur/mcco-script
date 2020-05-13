@@ -8,7 +8,11 @@ const materielDocBuild = require('./materiel-doc-build')
 const materielBuild = require('./materiel-build')
 const alert = require('./alert')
 require('dotenv').config({ path: paths.userDotEnvPath })
-const { STORE_URL, ACCESS_TOKEN } = process.env
+let { STORE_URL, ACCESS_TOKEN } = process.env
+
+if (!STORE_URL) {
+  STORE_URL = 'https://deno.cloud/mcco/api/'
+}
 
 async function publish() {
   const packageJSON = require(paths.userPackageJsonPath)
