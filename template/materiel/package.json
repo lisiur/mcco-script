@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mcco-script": "^1.1.0"
+    "mcco-script": "^1.1.3"
   }
 }
