@@ -1,7 +1,11 @@
 const {spawn} = require('child_process')
+const isWin = /^win/.test(process.platform)
 
 module.exports = function(cmd, cwd) {
-  const [cmdHead, ...cmdArgs] = cmd.split(' ')
+  let [cmdHead, ...cmdArgs] = cmd.split(' ')
+  if (cmdHead === 'npm' && isWin) {
+    cmdHead = 'npm.cmd'
+  }
   const cp = spawn(cmdHead, cmdArgs, {
     cwd,
     stdio: 'inherit',
