@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
+    "mcco": "./src/main.js",
     "mcco-script": "./src/main.js"
   },
   "keywords": [],

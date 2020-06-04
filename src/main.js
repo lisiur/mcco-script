@@ -22,6 +22,18 @@ program
   })
 
 program
+  .command('create <dirname>')
+  .option('-t, --template <type>', 'element | iview', 'default')
+  .action((dirname, { template }) => {
+    if (!['element', 'iview', 'default'].includes(template)) {
+      console.error('valid template: element | iview')
+      return
+    }
+    const dest = process.cwd() + `/${dirname}`
+    materielCreate(dest, dirname, { template })
+  })
+
+program
   .command('materiel-init')
   .option('-t, --template <type>', 'element | iview', 'default')
   .action(({ template }) => {
